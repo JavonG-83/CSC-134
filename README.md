@@ -1,4 +1,5 @@
 # CSC-134
 C++
 
-Javon Green; I like French Fries; Grand Piano
+Javon Green, French Fries, Grand Piano;
+Mr. Norris, Goku, EDM
