@@ -17,6 +17,7 @@ double revenue = 1.6;
     cout << "The movie " << name << " came out in " << release_date << endl;
     cout << "It had a grossing revenue of " << revenue << " million wolrdwide " << endl;
     cout << ""
+    COUT << "\"It's times like this my buddy Timon here says: you got to put your behind in your past.\" -Pumbaa <<
     cout << endl;
     
     }
