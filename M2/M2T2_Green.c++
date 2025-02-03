@@ -4,30 +4,38 @@ using namespace std;
 
 int main()
 {
-    string storename = "Javon's Burgers";
-    string foodname = "burger";
-    double foodprice = 4.99;
+    string storename = "Javon's Hotdogs";
+    string foodname = "Hotdog";
+    double foodprice = 2.99;
+    int hotdogcount;
 
 //reciept var
     double subtotal, total;
     double taxpercent, taxcost;
 // Order
-    cout << "Hello; Welcome to " << storename << endl;
-    cout << "You ordered one " << foodname << " and it's $" << foodprice << endl;
+    cout << "Hello, and welcome to " << storename << endl;
+    cout << endl;
+    cout << "Our " << foodname << "s costs " << foodprice << endl;
+    cout << "How many do you plan on ordering?" << endl;
+    cout << endl;
+    cin >> hotdogcount;
+    cout << endl;
+    cout << "You ordered " << hotdogcount << " " << foodname << "s for " << foodprice << " each." << endl;
     cout << endl;
 
 // Calculate subtotal, tax & total
     taxpercent = 0.08;
-    subtotal = foodprice;
+    subtotal = hotdogcount * foodprice;
     taxcost = subtotal * taxpercent;
     total = subtotal + taxcost;
 
 //Print the receipt
     cout << setprecision(2) << fixed;
-    cout << "Subtotal: $" << subtotal << endl;
-    cout << "Tax (8%): $" << taxcost << endl;
-    cout << "Total:    $" << total << endl;
-
+    cout << "----------------------------------" << endl;
+    cout << setw(14) << "Subtotal: $" << subtotal << setw(10) << endl;
+    cout << setw(14) << "Tax (8%): $" << taxcost << setw(10) << endl;
+    cout << setw(14) << "Total:    $" << total << setw(10) << endl;
+        cout << "----------------------------------" << endl;
     cout << "Have a great day!" << endl;
     cout << endl;
     return 0;
