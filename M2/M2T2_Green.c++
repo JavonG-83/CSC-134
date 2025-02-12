@@ -1,3 +1,9 @@
+// CSC 134
+// M2T2 - Reciept calculator
+// Javon Green
+// 1.29.2025 (I think)
+// NOTE: We're taking what we learned from M2T1 and mixing it with more formulas; we make a receipt
+
 #include <iostream>
 #include <iomanip>
 using namespace std;

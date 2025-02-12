@@ -1,8 +1,8 @@
-//CSC 134
-// M1LAB - Apple Orchard
+// CSC 134
+// M2T1 - Apple Orchard
 // Javon Green
 // 1.27.2025
-// NOTE: we'll be working with numbers that have decimals (doubles) and numbers without decimals (integers)
+// NOTE: Today, we wiill be using "cin" to take and record user input
 
 #include <iostream>
 #include <iomanip>
