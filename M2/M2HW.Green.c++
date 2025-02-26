@@ -46,5 +46,4 @@ int main()
     cout << fixed << setprecision(2);
     cout << "Account balance : $" << Afinal << endl;
 
-    endl;
 }
