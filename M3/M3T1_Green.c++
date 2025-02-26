@@ -3,32 +3,29 @@
 // Javon Green
 // 2.24.2025
 
-
-
     #include <iostream>
     #include <iomanip>
     using namespace std;
 
 int main()
 {
-    // So we will be using the if statement for more responsive interactions with the user
-    // "if" statements looks liek this:
+// So we will be using the if statement for more responsive interactions with the user
 
     int test;
 
-    // First, we get the user's respones
+// First, we get the user's respones
     cout << "Pick any number between 1 and 7" << endl;
     cout << endl;
     cin >> test;
     cout << endl;
 
-    // Then, we start usign the if statment
+// Then, we start usign the if statment
 
-    // This is how we write if statement:
-    // We use two equal signs to compare
-    // The expected input comes before the variable
-    // Use the SUPER COLONS to surround the results
-    if (4 == test) {
+// This is how we write if statement:
+// We use two equal signs to compare
+// The expected input comes before the variable
+// Use the SUPER COLONS to surround the results
+    if (6 == test) {
      cout << "You chose the right number" << endl;
      cout << "YOU WIN" << endl;
     }
@@ -36,8 +33,8 @@ int main()
 // We can use "else if" to add more special respones for inputs
     else if ( 3 == test) {
         cout << "You chose the wrong number, but it's a special lose this time" << endl;
-        cout << "YOU LOSE" << endl;
-        cout << "SPECIALLY" << endl;
+        cout << "YOU STILL LOST" << endl;
+        cout << endl;
     }
     
 // Using "else" writes a respone for all other possible input values
@@ -47,6 +44,7 @@ int main()
     }
 
     cout << endl;
-}
 
 // That was fairly simple
+}
+
