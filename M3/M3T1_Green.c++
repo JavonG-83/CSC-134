@@ -19,7 +19,7 @@ int main()
     cin >> test;
     cout << endl;
 
-// Then, we start usign the if statment
+// Then, we start using the if statment
 
 // This is how we write if statement:
 // We use two equal signs to compare
@@ -30,7 +30,7 @@ int main()
      cout << "YOU WIN" << endl;
     }
 
-// We can use "else if" to add more special respones for inputs
+// We can use "else if" to add more respones for inputs
     else if ( 3 == test) {
         cout << "You chose the wrong number, but it's a special lose this time" << endl;
         cout << "YOU STILL LOST" << endl;
