@@ -128,7 +128,24 @@ int main() {
     cout << "Type to start the next section" << endl;
     cin >> progression;
     cout << endl;
-    cout << "Question 3" << endl; // receipt calculator; use if statment for dining in or take out. dining in adds a 15% tip to the basse cost
+    cout << "Question 3" << endl; // make a simple choose your own adventure game
     cout << endl;
 
+    int choice
+    int choice2
+
+    cout << "A robber stole from your shop!" << endl;
+    cout << "How will you proceed?" << endl;
+    cout << "Chase after him! (1) / Demand he stops. (2)" << endl;
+    cin >> choice;
+        if(1==choice) {
+            cout << "You chase after him"
+        }
+
+        else if(2==choice) {
+            cout << "You demand he stops" << endl;
+            cout << "He doesn't listens, and runs away" << endl;
+            cout << "You lost a loaf of bread, worth $3.95" << endl;
+
+        }
 }
