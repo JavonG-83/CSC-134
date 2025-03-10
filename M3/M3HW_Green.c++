@@ -9,6 +9,7 @@
 #include <iomanip>
 #include <ctime>
 #include <cmath>
+#include <cstdlib>
 
 using namespace std;
 
@@ -131,21 +132,69 @@ int main() {
     cout << "Question 3" << endl; // make a simple choose your own adventure game
     cout << endl;
 
-    int choice
-    int choice2
+    int choice;
+    int choice2;
 
     cout << "A robber stole from your shop!" << endl;
     cout << "How will you proceed?" << endl;
     cout << "Chase after him! (1) / Demand he stops. (2)" << endl;
     cin >> choice;
-        if(1==choice) {
-            cout << "You chase after him"
+
+    if(1==choice) {
+        cout << "You chase after him" << endl;
+        cout << "He's faster than you" << endl;
+        cout << "He escapes" << endl;
+        cout << "You lost a loaf of bread, worth $3.95" << endl;
+        }
+    else if(2==choice) {
+        cout << "You demand he stops" << endl;
+        cout << "He freezes from your sheer itimidation" << endl;
+        cout << "Now's your chance!" << endl;
+        cout << "Lunge at him! (1) / Remind him HE MUST PAY (2)" << endl;
+        cin >> choice2;
+        if(1==choice2) {
+            cout << "You leap over the counter while leaping for him" << endl;
+            cout << "Thinking quickly, he runs out the door" << endl;
+            cout << "You faceplant to the floor, defeated" << endl;
+            cout << "But next time, HE WILL PAY" << endl;
+        }
+        else if(2==choice2) {
+            cout << "You remind him that HE MUST PAY!" << endl;
+            cout << "He hands over the loaf of bread and his wallet, before running away from the shop" << endl;
+            cout << "Never to return" << endl;
+            cout << "You retreive your loaf of bread, worth 3.95" << endl;
         }
 
-        else if(2==choice) {
-            cout << "You demand he stops" << endl;
-            cout << "He doesn't listens, and runs away" << endl;
-            cout << "You lost a loaf of bread, worth $3.95" << endl;
-
+        else {
+            cout << "You stare at him, unable to think of your next course of action" << endl;
+            cout << "He stares deep into your cold, lifeless eyes" << endl;
+            cout << "He slowly places the bread on the counter and backs away while mainting eye contact" << endl;
+            cout << "You stare into nothingness, undisturbed by time and space" << endl;
         }
+    }
+    
+    else {
+        cout << "Unable to think of a repsonse, he slowly moves farther and farther away" << endl;
+        cout << "He escapes, but the worst has yet to come..." << endl;
+        cout << "Your hit by a meteor" << endl;
+    }
+
+    cout << "Type to start the next section" << endl;
+    cin >> progression;
+    cout << endl;
+    cout << "Question 4" << endl; // randomized math problem (single digit)
+    cout << endl;
+
+    const int SIDES = 6; // yours will differ!
+    //int seed = 19;
+    int seed = time(0);
+    // seed the random number generator
+    srand(seed);
+    // rand() is a large number, so we take the remainder which is %
+    int roll;
+    // roll a few times
+    roll = ( (rand() % SIDES)+1 );
+    cout << roll << endl;
+    cout << endl;
+
 }
