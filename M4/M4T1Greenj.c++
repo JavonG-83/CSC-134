@@ -12,13 +12,14 @@ int main(){
     // 5-3
 
     while (number <= 5){
-        cout << "Hello\n";
+        cout << "Hello #" << number << "\n";
         number++;
     }
     cout << "Goodbye\n";
-
     cout << "\n";
+
     cout << "Progressing to step 2\n";
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
     cout << "\n";
 
     // 5-6
