@@ -179,22 +179,32 @@ int main() {
         cout << "Your hit by a meteor" << endl;
     }
 
+    cout << endl;
     cout << "Type to start the next section" << endl;
     cin >> progression;
     cout << endl;
     cout << "Question 4" << endl; // randomized math problem (single digit)
     cout << endl;
 
-    const int SIDES = 6; // yours will differ!
-    //int seed = 19;
-    int seed = time(0);
-    // seed the random number generator
-    srand(seed);
-    // rand() is a large number, so we take the remainder which is %
-    int roll;
-    // roll a few times
-    roll = ( (rand() % SIDES)+1 );
-    cout << roll << endl;
-    cout << endl;
+
+    int num1 = (rand() % 9);
+    int num2 = (rand() % 9);
+    int num3 = num1 + num2;
+    double answer;
+
+    cout << "Whats " << num1 << " + " << num2 << endl;
+    cin >> answer;
+
+    if (answer==num3){
+        cout << "Good Job" << endl;
+    }
+    else if (21==answer){
+        cout << "You stupid" << endl;
+    }
+    else {
+        cout << "Incorrect" << endl;
+    }
+
+
 
 }
