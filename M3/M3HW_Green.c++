@@ -20,7 +20,7 @@ int main() {
     string jokeanswer;
     string progression;
 
-    cout << "Question 1" << endl; // write a simple chatbot using if statements
+    cout << "Question 1" << endl; // write a chatbot using if statements
     cout << "Hello, I am Jokebot. Do you want to here a joke?" << endl;
     cout << "Yes / No" << endl;
     cout << endl;
@@ -68,7 +68,7 @@ int main() {
     cout << "Type to start the next section" << endl;
     cin >> progression;
     cout << endl;
-    cout << "Question 2" << endl; // receipt calculator; use if statment for dining in or take out. dining in adds a 15% tip to the basse cost
+    cout << "Question 2" << endl; // receipt calculator using if statment
     cout << endl;
 
     double price = 4.00;
@@ -129,7 +129,7 @@ int main() {
     cout << "Type to start the next section" << endl;
     cin >> progression;
     cout << endl;
-    cout << "Question 3" << endl; // make a simple choose your own adventure game
+    cout << "Question 3" << endl; // simple choose your own adventure game
     cout << endl;
 
     int choice;
