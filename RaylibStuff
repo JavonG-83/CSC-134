@@ -1,0 +1,67 @@
+// Welcome to raylib!
+
+// To test examples, just press F6 and execute 'raylib_compile_execute' script
+// Note that compiled executable is placed in the same folder as .c file
+
+#include "raylib.h"
+
+int main(void)
+{
+    // Initialization
+    //--------------------------------------------------------------------------------------
+    const int screenWidth = 800;
+    const int screenHeight = 450;
+
+    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+
+    SetTargetFPS(30);
+    //--------------------------------------------------------------------------------------
+
+    // Main game loop
+    while (!WindowShouldClose())    // Detect window close button or ESC key
+    {
+        // Update
+        //----------------------------------------------------------------------------------
+           int WIDTH=0;
+           int HEIGHT=0;
+           int linenum=1;
+           Color first;
+           Color second;
+        //----------------------------------------------------------------------------------
+
+        // Draw
+        //----------------------------------------------------------------------------------
+        BeginDrawing(); //Background
+
+            ClearBackground(RAYWHITE);
+            
+            for(int j=0; j<screenHeight; j = j + 50) {
+            WIDTH=0;
+            if (linenum % 2 == 0){
+                first = LIME;
+                second = GREEN;
+            }
+            else{
+                second = LIME;
+                first = GREEN;
+            }
+            
+            for(int i=0; i<screenWidth; i = i + 50) {
+            DrawRectangle(WIDTH,HEIGHT,50,50,first);
+            DrawRectangle(WIDTH+50,HEIGHT,50,50,second);
+            WIDTH = WIDTH + 100;
+            }
+            HEIGHT = HEIGHT + 50;
+            linenum = linenum + 1;
+            }
+        EndDrawing();
+        //----------------------------------------------------------------------------------
+    }
+
+    // De-Initialization
+    //--------------------------------------------------------------------------------------
+    CloseWindow();        // Close window and OpenGL context
+    //--------------------------------------------------------------------------------------
+
+    return 0;
+}
