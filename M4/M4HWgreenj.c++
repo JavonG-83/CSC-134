@@ -24,7 +24,7 @@ void loop1(){
     if (1<=request && 12>=request){
         loop2();
     }
-    else {
+    else{
         cout << "\n";
         cout << "Sorry, I didn't catch that\n";
         loop1();
