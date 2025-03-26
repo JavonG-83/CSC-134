@@ -17,6 +17,13 @@ void Choice1();
 void Front();
 void Back();
 void Veiw();
+void Mainroom();
+void DeadRoom();
+void OddRoom();
+void Bathroom()
+void MasterRoom();
+void Hallway();
+void Kitchen();
 
 int Time = 0;
 
@@ -74,7 +81,7 @@ void Choice1(){
     else if (choice==3){
         Veiw();
     }
-} 
+}
 }
 
 void Front(){
