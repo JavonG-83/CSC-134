@@ -24,8 +24,10 @@ void Start();
     void Veiw();
 
 int flashlight = 0;
-int key_smooth = 1;
+int key_shiny = 0;
 int shed_open = 0;
+int pipe0 = 0;
+int magnet = 0;
 
 int Time = 0;
 
@@ -98,8 +100,9 @@ void FrontDoor(){
     cout << "How will you proceed?" << endl;
     cout << "[1] Door" << endl;
     cout << "[2] Window" << endl;
+    cout << "[3] Pipe" << endl;
     cout << "[3] Back" << endl;
-    while (choice != 3) {
+    while (choice != 4) {
         cin >> choice;
         if (choice<1 || choice>3 || cin.fail()) {
             cin.clear(); // Clear the error flag
@@ -110,14 +113,25 @@ void FrontDoor(){
         }
         
         else if (choice==1){
-            cout << "The door is locked" << endl;
+            cout << "There is no door" << endl;
+            cout << "but you still can't pass" << endl;
         }
         else if (choice==2){
             cout << "Curtains block the way." << endl;
-            cout << "You can see the word 'END' Ingraved into the window" << endl;
-            cout << "Not ominous at all :";
+            cout << "You can see the word 'DEMO' Ingraved into the window" << endl;
+            cout << "Not ominous at all";
         }
         else if (choice==3){
+            if (pipe0==0){
+            cout << "There's a pipe here" << endl;
+            cout << "*Got Pipe" << endl;
+            pipe0 = 1;
+            }
+            else{
+                cout << "Pipe" << endl;
+            }
+        }
+        else if (choice==4){
             cout << "You walk back to the front" << endl;
             sleep(2);
             system("clear");
@@ -132,9 +146,9 @@ void Back(){
     cout << "You stand at the back of the house" << endl;
     cout << "How will you proceed?" << endl;
     cout << endl;
-    cout << "[1] Walk over to the grave" << endl;
+    cout << "[1] Walk over to the Grave" << endl;
     cout << "[2] Head to the Shed" << endl;
-    cout << "[3] Look through the window" << endl;
+    cout << "[3] Look through the Window" << endl;
     cout << "[4] Head back to the front" << endl;
     
     while (choice != 4) {
@@ -159,12 +173,12 @@ void Back(){
 
     else if (choice==2){
         if (shed_open==0){
-            if(key_smooth==0){
-                cout << "The door is locked" << endl;
-                cout << "The keyhole has a smooth shape" << endl;
+            if(key_shiny==0){
+                cout << "There's actually a door here, and it's locked" << endl;
+                cout << "This one has a keyhole" << endl;
             }
-            else if(key_smooth==1){
-                cout << "You use the smoothed key" << endl;
+            else if(key_shiny==1){
+                cout << "You use the shiny key" << endl;
                 shed_open = 1;
                 cout << "The door is unlocked" << endl;
             }
@@ -179,13 +193,22 @@ void Back(){
     }
 
     else if (choice==3){
-        cout << "You peek at the window" << endl;
-        if (key_smooth == 0){
-            cout << "A key stands on the windowsheild" << endl;
-            key_smooth = 1;
-            cout << "Got Smooth Key : " << key_smooth << endl;
+        cout << "You peek through the window" << endl;
+        if (key_shiny == 0){
+            cout << "A key shines on the otherside" << endl;
+            if (magnet==0){
+                cout << "*You use the magnet" << endl;
+                cout << "The Key Snaps to the magnet" << endl;
+                cout << "A perfect key shaped hole is left in the glass" << endl;
+                cout << "Got Key" << endl;
+                key_shiny = 1;
+            }
+            else {
+                cout << "But you can't get it" << endl;
+            }
+
         }
-        else if (key_smooth==1){
+        else if (key_shiny==1){
             cout << "Nothing happens" << endl;
         }
     }
@@ -202,9 +225,10 @@ void Back(){
 
 void Veiw(){}
 void Shed(){
-    cout << "fin" << endl;
+    cout << "Fin" << endl;
 }
 void Grave(){
+    int choice;
     cout << "You stand infront of a grave" << endl;
     cout << "How will you proceed?" << endl;
     cout << "[1] Observe" << endl;
@@ -216,16 +240,28 @@ if ( choice<1 || choice>2 || cin.fail() ) {
     cin.clear(); // Clear the error flag
     cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
     cout << "You gaze at the grave" << endl;
-    cout << "It didn't help at all"
+    cout << "It didn't help at all" << endl;
     Time = Time + 1;
     cout << "Time : " << Time << endl;
     }
 else if (choice==1){
     cout << "You look at the grave" << endl;
-    cout << "There's something stuck in the ground" << endl;
-    cout << "[1] Pull it with force you might" << endl;
-    cout << "[2] Dig it out Just leave it" << endl;
-    cout << "[3] Leave and retreat" << endl;
+    cout << "There's something shiny in the ground" << endl;
+    cout << "Your body feels weird near it" << endl;
+    cout << "But you can't reach it" << endl;
+        if(pipe0==1){
+            cout << "*You poke it with the pipe" << endl;
+            cout << "It sticks to the pipe and you tug it out" << endl;
+            cout << "*Got Magnet" << endl;
+            magnet = 1;
+        }
+}
+else if (choice==2){
+    cout << "You retreat from the grave" << endl;
+    sleep(2);
+    system("clear");
+    sleep(1);
+    Back();
 }
 }
 }
