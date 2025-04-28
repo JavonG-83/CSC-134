@@ -39,7 +39,7 @@ int main() {
     
     // Room descriptions array
     string roomDescriptions[NUM_ROOMS] = {
-        "Flowers blooming as they approach the front door",
+        "Beds of flowers blooming as they approach the front door",
         "Walls lined with ancient books. The air smells of old paper.",
         "A spacious kitchen with an old stove and wooden counter.",
         "An overgrown garden with stone pathways and a small fountain.",
@@ -59,10 +59,15 @@ int main() {
     
     // Define the connections between rooms using the Room enum
     // Entrance Hall connections
-    connections[FRONT][NORTH] = FRONTDOOR;    // Entrance Hall -> North -> Library
-    connections[FRONT][EAST] = -1;     // Entrance Hall -> East -> Kitchen
-    connections[FRONT][SOUTH] = -1;         // No connection south
-    connections[FRONT][WEST] = -1;      // Entrance Hall -> West -> Garden
+    connections[FRONTYARD][NORTH] = FRONTDOOR;    // Entrance Hall -> North -> Library
+    connections[FRONTYARD][EAST] = -1;     // Entrance Hall -> East -> Kitchen
+    connections[FRONTYARD][SOUTH] = ENDGAME;         // No connection south
+    connections[FRONTYARD][WEST] = -1;      // Entrance Hall -> West -> Garden
+
+    connections[FRONTDOOR][NORTH] = Living;    // Entrance Hall -> North -> Library
+    connections[FRONTDOOR][EAST] = -1;     // Entrance Hall -> East -> Kitchen
+    connections[FRONTDOOR][SOUTH] = ENDGAME;         // No connection south
+    connections[FRONTDOOR][WEST] = -1;      // Entrance Hall -> West -> Garden
     
     // Game state
     int currentRoom = ENTRANCE_HALL; // Start in the Entrance Hall
