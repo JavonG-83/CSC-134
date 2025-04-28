@@ -42,7 +42,7 @@ int main() {
     cout << "M7T1 - Restaurant Reviews" << endl;
     cout << endl;
     // make a restaurant
-    Restaurant rest1 = Restaurant("Mi Casita", 4);
+    Restaurant rest1 = Restaurant("Mi Casita", 0.5);
     // ask for a reveiw
     Restaurant rest2 = Restaurant();
     // show data

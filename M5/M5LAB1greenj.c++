@@ -12,7 +12,7 @@ using namespace std;
 
 // use void functions to tell a simple story; user input validation requiered
 
-                    void Homescreen();
+void Homescreen();
 void Story1();
 void Start();
     void FrontDoor();
