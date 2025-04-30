@@ -1,30 +1,25 @@
 // CSC 134
 // Javon Green
-// CODE-ON - MY FINAL PROJECT
+// BLOB - MY FINAL PROJECT
 
-// Gameshow style game were questions about CSC134 are asked
-// Get as high of a core as you can
+Walking simulator with a bunch of rooms
 
-Modules
-    M1
-Hello World
-Jane's Apples
-Movie Talk
-BONUS : file label name
-cin
-pseudoe code
-Turtle Graphics
-
-    M3
-    M4
-    M5
-    M6
-    M7
-
-Hello World
-Hello Student
-Jane's Appples
-Movie Talk
-Tax Talk
-Cubes and You
-Banking
+blue    Walking
+    just navigate
+    secret: walk around more
+purple  Looped Exits
+    rooms lead back into one another
+    secret: walk back at the transition room
+red     Memory
+    Remember a sign's guidence
+    Secret: remember an optional challenge well
+orange  Perspectives
+    Super weird Perspectives
+    Secret: Implied
+yellow  Fakeouts
+    Sprites shown through animations
+    secret: implied
+green   Sprites & Items
+    Move through a town
+    Take items to and from Sprites
+    Secret: Implied
