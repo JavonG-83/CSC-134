@@ -10,16 +10,9 @@ blue    Walking
 purple  Looped Exits
     rooms lead back into one another
     secret: walk back at the transition room
-red     Memory
-    Remember a sign's guidence
-    Secret: remember an optional challenge well
-orange  Perspectives
-    Super weird Perspectives
-    Secret: Implied
-yellow  Fakeouts
-    Sprites shown through animations
-    secret: implied
-green   Sprites & Items
-    Move through a town
-    Take items to and from Sprites
-    Secret: Implied
+
+IDEAS
+walk through a town and give items to npcs -- Green
+step on a special tile for an better look at the area -- red
+switch to a room and see the entire layout-- yellow
+orange
